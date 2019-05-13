@@ -20,6 +20,7 @@ requirements:
   host:
     - cffi >=1.11.5
     - chi2comb >=0.0.3
+    - pip
     - pytest-runner
     - python >3
     - setuptools >=39
@@ -33,6 +34,8 @@ requirements:
 test:
   commands:
     - cd ../
+    - which pytest
+    - which python
     - pytest --help
     - python -c "import pytest_doctestplus"
     - python -c "import sys; import chi2comb; sys.exit(chi2comb.test())"
