@@ -1,5 +1,5 @@
 {% set name = "chi2comb-py" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/chi2comb/chi2comb-{{ version }}.tar.gz
-  sha256: 5e209d8fe0a1b4df2e3c48af61146903f3ca38a73b2a50672f43fc98ee9c6adf
+  sha256: 1fd5017c059d38c748ffd4416723658e66231e5d91fc2b7faa3db5855219214f
 
 build:
   number: 0
