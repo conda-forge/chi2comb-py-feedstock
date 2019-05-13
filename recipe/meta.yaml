@@ -32,7 +32,7 @@ requirements:
     - python >3
 
 test:
-  import:
+  imports:
     - chi2comb
   commands:
     - pytest --help
