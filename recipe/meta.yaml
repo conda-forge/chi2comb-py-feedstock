@@ -11,7 +11,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [py27]
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -22,19 +21,21 @@ requirements:
     - chi2comb >=0.0.3
     - pip
     - pytest-runner >=4.2
-    - python
+    - python >3
     - setuptools >=38.4.0
   run:
-    - pytest-doctestplus >=0.3.0
     - cffi >=1.11.5
     - chi2comb >=0.0.3
     - pytest >=3.6.3
+    - pytest-doctestplus >=0.3.0
     - pytest-runner >=4.2
-    - python
+    - python >3
 
 test:
   imports:
     - chi2comb
+  commands:
+    - python -c "import sys; import chi2comb; sys.exit(chi2comb.test())"
 
 about:
   home: https://github.com/limix/chi2comb-py
