@@ -33,11 +33,8 @@ requirements:
     - python >3
 
 test:
-  requires:
-    - pytest-doctestplus
-  imports:
-    - chi2comb
   commands:
+    - pytest --help
     - python -c "import sys; import chi2comb; sys.exit(chi2comb.test())"
 
 about:
