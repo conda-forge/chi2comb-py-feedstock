@@ -35,9 +35,7 @@ test:
   import:
     - chi2comb
   commands:
-    # pytest-doctestplus is not installing its hook for unknown reason
     - pytest --help
-    # - python -c "import sys; import chi2comb; sys.exit(chi2comb.test())"
 
 about:
   home: https://github.com/limix/chi2comb-py
