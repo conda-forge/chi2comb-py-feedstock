@@ -16,3 +16,5 @@ python:
 - 3.7.* *_cpython
 python_impl:
 - cpython
+target_platform:
+- linux-64
