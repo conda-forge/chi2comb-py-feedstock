@@ -10,7 +10,7 @@ source:
   sha256: e1605e065747a04c95a244ac4dd727af06a0f99a22f3d4ff549b2ebdcafee7aa
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py27 or python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,15 +21,15 @@ requirements:
     - cffi >=1.11.5
     - chi2comb >=0.0.3
     - pip
-    - pytest-runner >=4.2
+    - pytest-runner >=5
     - python
-    - setuptools >=38.4.0
+    - setuptools >=49.6.0
   run:
-    - pytest-doctestplus >=0.3.0
+    - pytest-doctestplus >=0.8.0
     - cffi >=1.11.5
     - chi2comb >=0.0.3
-    - pytest >=3.6.3
-    - pytest-runner >=4.2
+    - pytest >=5
+    - pytest-runner >=5
     - python
 
 test:
