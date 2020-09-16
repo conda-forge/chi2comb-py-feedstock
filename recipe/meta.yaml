@@ -1,5 +1,5 @@
 {% set name = "chi2comb-py" %}
-{% set version = "0.0.4" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/chi2comb/chi2comb-{{ version }}.tar.gz
-  sha256: 1fd5017c059d38c748ffd4416723658e66231e5d91fc2b7faa3db5855219214f
+  sha256: e1605e065747a04c95a244ac4dd727af06a0f99a22f3d4ff549b2ebdcafee7aa
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py27 or python_impl == 'pypy']
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -41,7 +41,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Linear combination of independent noncentral chi-squared random variables'
+  summary: Linear combination of independent noncentral chi-squared random variables
   dev_url: https://github.com/limix/chi2comb-py
 
 extra:
