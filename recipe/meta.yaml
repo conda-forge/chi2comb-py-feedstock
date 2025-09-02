@@ -6,17 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/chi2comb/chi2comb-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/chi2comb/chi2comb-{{ version }}.tar.gz
   sha256: e1605e065747a04c95a244ac4dd727af06a0f99a22f3d4ff549b2ebdcafee7aa
 
 build:
-  number: 6
+  number: 7
   skip: true  # [python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cffi >=1.11.5
     - chi2comb >=0.0.3
